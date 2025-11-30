@@ -2,7 +2,9 @@
 """
 Senior Data Scientist.: Dr. Eddy Giusepe Chirinos Isidro
 
-Script para INGESTÃO de dados - Executar UMA VEZ
+Script ingerir_dados.py
+=======================
+Script para INGESTÃO de dados - Executar UMA VEZ apenas.
 Este script carrega os arquivos Markdown e cria o banco vetorial Chroma.
 NÃO precisa executar novamente a menos que adicione novos documentos.
 """
@@ -100,7 +102,7 @@ def ingerir_documentos():
     print("⚠️  Os embeddings serão persistidos e NÃO precisarão ser recriados.")
     
     # Criar embeddings e salvar no Chroma
-    embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
+    embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
     
     vectorstore = Chroma.from_documents(
         documents=doc_splits,
