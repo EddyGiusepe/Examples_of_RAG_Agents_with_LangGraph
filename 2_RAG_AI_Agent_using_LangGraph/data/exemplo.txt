@@ -1,0 +1,71 @@
+Exemplo de Documento para RAG Agent
+====================================
+
+LangGraph: Framework para Agentes de IA
+----------------------------------------
+
+LangGraph é uma biblioteca Python desenvolvida pela LangChain que permite construir 
+aplicações de agentes de IA com lógica complexa e fluxos de decisão customizáveis.
+
+Principais Características:
+
+1. Arquitetura baseada em Grafos
+   - Os agentes são modelados como grafos direcionados
+   - Nós representam operações ou ações
+   - Arestas definem o fluxo de controle
+
+2. Estado Compartilhado
+   - Todos os nós compartilham um estado comum
+   - O estado pode ser customizado com TypedDict
+   - Suporte para diferentes estratégias de atualização
+
+3. Memória Persistente
+   - Sistema de checkpointing integrado
+   - Suporta MemorySaver, SqliteSaver, PostgresSaver
+   - Permite "time travel" - voltar a estados anteriores
+
+4. Human-in-the-Loop
+   - Pausar execução para aprovação humana
+   - Modificar decisões do agente
+   - Controle granular sobre ações críticas
+
+5. Observabilidade
+   - Fácil visualização do fluxo de execução
+   - Debugging simplificado
+   - Integração com LangSmith para monitoring
+
+Casos de Uso:
+
+- Assistentes conversacionais com RAG
+- Agentes de pesquisa autônomos
+- Sistemas multi-agente colaborativos
+- Workflows complexos com decisões condicionais
+- Automação de tarefas com aprovação humana
+
+Como Funciona um Agente RAG:
+
+1. O usuário faz uma pergunta
+2. O agente decide se precisa buscar contexto
+3. A ferramenta de retrieval busca documentos relevantes
+4. O agente gera uma resposta usando o contexto
+5. A resposta é retornada ao usuário
+
+Vantagens sobre LangChain Tradicional:
+
+- Maior controle sobre o fluxo de execução
+- Suporte nativo a loops e ciclos
+- Melhor para agentes complexos
+- Estado persistente entre invocações
+- Debugging mais fácil
+
+Recursos de Aprendizado:
+
+- Documentação oficial: https://langchain-ai.github.io/langgraph/
+- LangChain Academy: cursos gratuitos sobre LangGraph
+- Exemplos no GitHub: github.com/langchain-ai/langgraph
+- Comunidade Discord: discord.gg/langchain
+
+Este é um exemplo de documento que pode ser usado para testar o agente RAG.
+Você pode adicionar seus próprios documentos na pasta 'data/' e o agente
+será capaz de responder perguntas sobre eles!
+
