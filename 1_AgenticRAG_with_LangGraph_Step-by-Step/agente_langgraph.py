@@ -60,7 +60,7 @@ Para resolver:
         # Carregar o banco vetorial existente (SEM recriar embeddings!)
         vectorstore = Chroma(
             collection_name="ri_vix_docs",
-            embedding_function=OpenAIEmbeddings(model="text-embedding-3-small"),
+            embedding_function=OpenAIEmbeddings(model="text-embedding-3-large"),
             persist_directory=chroma_db_path
         )
         
